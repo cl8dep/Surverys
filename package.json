@@ -2,7 +2,10 @@
   "name": "surveys",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": {
+    "name": "Arael David Espinosa Pérez",
+    "email": "cl8dep@gmail.com"
+  },
   "private": true,
   "license": "MIT",
   "scripts": {
