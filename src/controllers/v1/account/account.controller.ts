@@ -1,7 +1,7 @@
 import { Controller, Get } from '@nestjs/common';
 
-@Controller()
-class AppController {
+@Controller("api/v1/account")
+class AccountController {
   constructor() {}
 
   @Get()
@@ -10,4 +10,4 @@ class AppController {
   }
 }
 
-export default AppController;
+export default AccountController;

@@ -1,3 +1,7 @@
-import AppController from './app.controller';
+import AccountController from './account';
+import AuthController from './auth'
 
-export default AppController;
+export {
+    AccountController,
+    AuthController
+}

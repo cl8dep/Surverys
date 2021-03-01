@@ -15,10 +15,24 @@ describe('AppController (e2e)', () => {
     await app.init();
   });
 
-  it('/ (GET)', () => {
+  it('(POST) api/v1/auth/sign-in', () => {
     return request(app.getHttpServer())
-      .get('/')
-      .expect(200)
-      .expect('Hello World!');
+      .post('/api/v1/auth/sign-in')
+      .expect(201)
+      .expect('Sign In!');
+  });
+
+  it('(POST) api/v1/auth/sign-up', () => {
+    return request(app.getHttpServer())
+      .post('/api/v1/auth/sign-up')
+      .expect(201)
+      .expect('Sign Up!');
+  });
+
+  it('(POST) api/v1/auth/recover-password', () => {
+    return request(app.getHttpServer())
+      .post('/api/v1/auth/recover-password')
+      .expect(201)
+      .expect('Recover Password!');
   });
 });
