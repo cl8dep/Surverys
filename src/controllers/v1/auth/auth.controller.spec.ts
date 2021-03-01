@@ -17,10 +17,10 @@ describe('AppController', () => {
       expect(appController.signIn()).toBe('Sign In!');
     });
     it('should return "Sign Up!"', () => {
-        expect(appController.signUp()).toBe('Sign Up!');
-      });
-      it('should return "Recover Password!"', () => {
-        expect(appController.recoverPassword()).toBe('Recover Password!');
-      });
+      expect(appController.signUp()).toBe('Sign Up!');
+    });
+    it('should return "Recover Password!"', () => {
+      expect(appController.recoverPassword()).toBe('Recover Password!');
+    });
   });
 });

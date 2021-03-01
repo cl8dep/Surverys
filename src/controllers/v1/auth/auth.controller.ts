@@ -1,22 +1,22 @@
 import { Controller, Post } from '@nestjs/common';
 
-@Controller("api/v1/auth")
+@Controller('api/v1/auth')
 class AppController {
   constructor() {}
 
-  @Post("/sign-in")
+  @Post('/sign-in')
   signIn(): string {
-    return "Sign In!";
+    return 'Sign In!';
   }
 
-  @Post("/sign-up")
+  @Post('/sign-up')
   signUp(): string {
-    return "Sign Up!";
+    return 'Sign Up!';
   }
 
-  @Post("/recover-password")
+  @Post('/recover-password')
   recoverPassword(): string {
-    return "Recover Password!";
+    return 'Recover Password!';
   }
 }
 

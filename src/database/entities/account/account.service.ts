@@ -5,7 +5,9 @@ import { REPOSITORY_NAME } from './account.provider';
 
 @Injectable()
 export class AccountService {
-  constructor(@Inject(REPOSITORY_NAME) private accountRepository: Repository<Account>) {}
+  constructor(
+    @Inject(REPOSITORY_NAME) private accountRepository: Repository<Account>,
+  ) {}
 
   async create(args: any) {
     return `This action create an account`;
