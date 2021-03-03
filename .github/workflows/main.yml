@@ -4,22 +4,22 @@ on:
   push:
     branches:
       - master
-      
-env:
-  node-version: 14.x
-  
+ 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Installing dependencies using Node.js ${{ env.node-version }}
+      - name: Using Node.js v14.x
       - uses: actions/setup-node@v1
         with:
-          node-version: ${{ env.node-version }}
-      - run: yarn
+          node-version: 14.x
+          
+      - name: Installing dependencies
+        run: yarn
+      
       - name: Building project
-      - run: yarn build
+        run: yarn build
          
 #   deploy:
 #     needs: ['build']
