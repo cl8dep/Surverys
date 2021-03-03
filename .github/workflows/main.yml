@@ -1,4 +1,4 @@
-name:🔨 Build and 🚀 Deploy to Heroku 
+name: 🔨 Build and 🚀 Deploy to Heroku 
 
 on:
   push:
@@ -17,10 +17,12 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ env.node-version }}
-      - name: "Installing dependencies"
-        - run: yarn
-      - name: "Building project"
-        - run: yarn build
+          
+      - name: Installing dependencies
+      - run: yarn
+      
+      - name: Building project
+      - run: yarn build
          
   deploy:
     needs: ['build']
