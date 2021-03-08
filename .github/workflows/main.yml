@@ -1,0 +1,40 @@
+name: 🔨 Build and 🚀 Deploy to Heroku 
+
+on:
+  push:
+    branches:
+      - master
+ 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+
+    - name: ⚙ Set up Node.js version
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+
+    - name: 🧱 Install dependencies
+      run: npm install  
+
+    - name: ✅ Linter
+      run: npm run prettier:check
+
+    - name: 🔨 Build
+      run: npm run build
+         
+  deploy:
+    needs: ['build']
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
+          heroku_email: ${{secrets.HEROKU_EMAIL}}
+          procfile: "web: yarn start:prod"
+      
