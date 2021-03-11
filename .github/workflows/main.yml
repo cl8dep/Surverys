@@ -38,5 +38,5 @@ jobs:
           heroku_email: ${{secrets.HEROKU_EMAIL}}
           useforce: true
           dynamicFiles: false
-          procfile: "web: yarn start:prod"
+          procfile: "web: npm run start:prod"
       
