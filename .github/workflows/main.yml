@@ -35,8 +35,4 @@ jobs:
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
-          heroku_email: ${{secrets.HEROKU_EMAIL}}
-          useforce: true
-          dynamicFiles: false
-          procfile: "web: npm run start:prod"
-      
+          heroku_email: ${{secrets.HEROKU_EMAIL}}      
