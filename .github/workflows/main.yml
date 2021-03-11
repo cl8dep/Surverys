@@ -20,8 +20,8 @@ jobs:
     - name: 🧱 Install dependencies
       run: npm install  
 
-    - name: ✅ Linter
-      run: npm run prettier:check
+    # - name: ✅ Linter
+    #   run: npm run prettier:check
 
     - name: 🔨 Build
       run: npm run build
